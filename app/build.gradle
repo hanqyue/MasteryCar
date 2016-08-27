@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0 rc3"
+
+    defaultConfig {
+        applicationId "com.example.p_c.masterycar"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile project(':library')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile files('libs/weizhang_sdk.jar')
+    compile files('libs/volley.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/AMap_Location_V2.4.0_20160308.jar')
+    provided fileTree(include: ['*.jar'], dir: 'pri_libs')
+    compile files('libs/sunjce_provider.jar')
+}

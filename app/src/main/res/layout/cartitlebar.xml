@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/titlebar"
+                android:layout_width="fill_parent"
+                android:layout_height="51.0dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/blue"
+                android:paddingLeft="@dimen/pd"
+                android:paddingRight="@dimen/pd" >
+
+    <Button
+        android:id="@+id/begin_addcar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:drawableLeft="@drawable/jiaohao"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/white"
+        android:textSize="16.0sp"
+        android:text="点此添加车辆"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/carsign"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baoma"
+        android:visibility="gone"
+       />
+    <Button
+        android:id="@+id/cartitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="50dp"
+        android:textColor="@android:color/white"
+        android:textSize="20.0sp"
+        android:text="丰田 凯美瑞"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+
+    <ImageView
+        android:id="@+id/bar_xizai"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:tint="@color/write"
+        android:src="@drawable/xiazai"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

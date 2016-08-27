@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/csy_listitem_citys"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/carmodelitem"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:text="丰田"
+            />
+        <TextView
+            android:id="@+id/bodyitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/carmodelitem"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="47dp"
+            android:textSize="16sp"
+            android:text="四门四座"/>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.p_c.masterycar"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!-- 授予该程序录制声音的权限 -->
+       
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+       
+    <!-- 授予该程序使用摄像头的权限 -->
+       
+    <user-permission android:name="android.permission.CAMERA"/>
+       
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    //---------------------------------------------------------------------//
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE">
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name=" android.permission.ACCESS_WIFI_STATE "/>
+    <uses-feature android:name="android.permission.CHANGE_WIFI_STATE "/>
+    <uses-feature android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/masterycar"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <service android:name=".ServiceMange.CarSocketService"/>
+        <service android:name="com.cheshouye.api.client.WeizhangIntentService"/>
+
+        <activity
+            android:name=".StartoverActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".LockCar.LockcarActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".CarStatus.CarStatusActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CarStatus.FaultcodeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CarInfo.CarListActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Peccancy.PeccancyActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Peccancy.CarselectActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Peccancy.CityList"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Peccancy.ProvinceList"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CarInfo.CarShowinfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CarInfo.AddCarinfoActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CarInfo.Selectcarbrand"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CarInfo.Selectcarmodel"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".camera.LinkCameraSettingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".camera.AddCameraActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="Add Camera"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".camera.PlayBackTFActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".camera.PlayBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".camera.LocalPictureAndVideoActivity">
+        </activity>
+        <activity android:name=".camera.SettingActivity">
+        </activity>
+        <activity android:name=".camera.SettingUserActivity">
+        </activity>
+        <activity android:name=".camera.SettingSDCardActivity">
+        </activity>
+        <activity android:name=".camera.LocalVideoGridActivity">
+        </activity>
+        <activity android:name=".camera.SettingDateActivity">
+        </activity>
+        <activity android:name=".camera.SettingAlarmActivity">
+        </activity>
+        <activity android:name=".camera.FirmwareUpdateActiviy">
+        </activity>
+        <activity android:name=".camera.SensorListActivty">
+        </activity>
+        <activity android:name=".camera.SensorStartCodeActivity">
+        </activity>
+        <activity android:name=".camera.EditSensorActivity">
+        </activity>
+        <activity android:name=".camera.ShowLocalVideoActivity">
+        </activity>
+        <activity
+            android:name=".camera.BaseActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="play">
+        </activity>
+        <activity
+            android:name=".camera.SettingWifiActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="WifiSetting"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name=".camera.PlayActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <service android:name=".camera.BridgeService">
+        </service>
+        <service android:name=".ServiceMange.CarConnectServer">
+        </service>
+        //--------------------------------------//
+        <activity android:name=".GMap.PoiSerchActivity"/>
+        <activity android:name=".Gson.MainTestActivity"/>
+        <activity android:name=".GMap.DriveRouteDetailActivity"/>
+        <activity android:name=".GMap.RouteActivity"/>
+        <activity android:name=".GMap.BaseActivity"/>
+        <activity
+            android:name=".CarVideo.CarVideo"
+            android:screenOrientation="landscape"/>
+
+        <service android:name="com.amap.api.location.APSService"/>
+        <!-- key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="edb26896220ac46dd1a3c149e7055144"/>
+
+        <activity
+            android:name=".GMap.ItoAim"
+            android:label="@string/title_activity_ito_aim"/>
+        <activity android:name=".offlinemap.OfflineMapActivity"/>
+        <activity android:name=".ViewVideo.ViewVideoActivity"/>
+
+        <activity android:name=".CarVideo.MyVideo">
+        </activity>
+        <activity android:name=".CarStatus.FaultCodeListActivity">
+        </activity>
+    </application>
+
+</manifest>

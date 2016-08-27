@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/titlebar"
+                android:layout_width="match_parent"
+                android:layout_height="51.0dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/titlebarying"
+                android:paddingLeft="@dimen/pd"
+                android:paddingRight="@dimen/pd" >
+
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/arr_back"
+        android:tint="@color/blue"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20.0sp"
+        android:visibility="gone"
+       />
+
+    <TextView
+        android:id="@+id/bar_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/blue"
+        android:background="@android:color/transparent"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

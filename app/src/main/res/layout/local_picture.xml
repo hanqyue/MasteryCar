@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/bg_style"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- style="@style/bg_style" -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/top"
+            style="@style/top_bg_style"
+            android:layout_width="fill_parent"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1.0"
+                android:text="@string/back"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_title_size" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10.0dip"
+                android:shadowColor="@color/color_shadow"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:text="@string/check_localpic"
+                android:textColor="@color/color_white"
+                android:textSize="18.0sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- <ImageView -->
+        <!-- android:id="@+id/line1" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="2.0dip" -->
+        <!-- android:layout_below="@+id/top" -->
+        <!-- android:src="@drawable/background_separate_vertical" /> -->
+
+        <ListView
+            android:id="@+id/localpic_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_white_corner"
+            android:cacheColorHint="#00000000"
+            android:listSelector="@drawable/listitem_bg_selector"
+            android:padding="10dp" >
+        </ListView>
+    </LinearLayout>
+
+    <!-- <TextView
+        android:id="@+id/localpic_tv_nopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:text="@string/localpic_no"
+        android:textColor="@color/color_white"
+        android:textSize="24sp" /> -->
+
+    <LinearLayout
+        android:id="@+id/toip"
+        style="@style/top_bg_style"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_gravity="bottom"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:layout_below="@+id/top"
+            android:src="@drawable/background_separate_vertical" />
+
+        <TextView
+            android:id="@+id/tv_camera_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5.0dip"
+            android:shadowColor="@color/color_shadow"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:textColor="@color/color_white"
+            android:textSize="18.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

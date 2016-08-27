@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.p_c.masterycar.GMap.ItoAim">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+       <TextView
+           android:layout_width="45dp"
+           android:layout_height="45dp"
+           android:layout_marginLeft="15dp"
+           android:layout_marginTop="5dp"
+           android:text="从"
+           android:textSize="20dp" />
+        <AutoCompleteTextView
+            android:id="@+id/myposition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:hint="  我  的  位  置"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        >
+        <ImageView
+            android:id="@+id/change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tint="#6a6b6c"
+            android:src="@drawable/huhuan" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1">
+        <TextView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:text="到"
+            android:textSize="20dp" />
+        <AutoCompleteTextView
+            android:id="@+id/array_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:hint="@string/endlocation"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/route_drive"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="left"
+            android:src="@drawable/route_drive_normal"/>
+        <TextView
+            android:id="@+id/route"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/startlocation"
+            android:gravity="center"
+            android:textSize="30dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

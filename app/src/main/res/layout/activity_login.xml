@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/titbar"
+            layout="@layout/cartitlebar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@color/blue"
+
+            >
+
+            <com.example.p_c.masterycar.SeismicWaveView
+                android:id="@+id/seismicwaveview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <ImageView
+                android:id="@+id/imageCar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:tint="@color/white"
+                android:src="@drawable/connectcar"
+               />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="96dp">
+
+                <ImageButton
+                    android:id="@+id/DaoHang"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/daohang">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/DaoHang"
+                    android:layout_below="@id/DaoHang"
+                    android:paddingLeft="18dip"
+                    android:text="导航"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="96dp">
+
+                <ImageButton
+                    android:id="@+id/AddGas"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/luxiang">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/AddGas"
+                    android:layout_below="@id/AddGas"
+                    android:paddingLeft="6dip"
+                    android:text="行车录像"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="96dp">
+
+                <ImageButton
+                    android:id="@+id/drivingVideo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/video_default"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/drivingVideo"
+                    android:layout_alignLeft="@id/drivingVideo"
+                    android:paddingLeft="6sp"
+                    android:text="旅途回忆"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="96dp">
+
+                <ImageButton
+                    android:id="@+id/lockcar"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:tint="@color/sweetbule"
+                    android:src="@drawable/suochefangdao"
+                   >
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/lockcar"
+                    android:layout_below="@id/lockcar"
+                    android:paddingLeft="18dip"
+                    android:text="锁车"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="96dp">
+
+                <ImageButton
+                    android:id="@+id/weizhang"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/weizhang">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/weizhang"
+                    android:layout_below="@id/weizhang"
+                    android:paddingLeft="6sp"
+                    android:text="违章查询"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                            android:layout_width="120dp"
+                            android:layout_height="96dp">
+
+                <ImageButton
+                    android:id="@+id/car_info"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/transparent"
+                    android:src="@drawable/chekuang">
+                </ImageButton>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/car_info"
+                    android:layout_below="@id/car_info"
+                    android:paddingLeft="18dip"
+                    android:text="车况"
+                    android:textSize="16sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
